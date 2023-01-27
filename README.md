@@ -1,6 +1,10 @@
-# Dappazon
+<img src="./public/blog-banner.png" alt="developer profile" />
 
-## Technology Stack & Tools
+<div style="margin-bottom: 20px;"></div>
+
+# **Dappazon**
+
+## Technology `Stack` & `Tools`
 
 - Solidity (Writing Smart Contracts & Tests)
 - Javascript (React & Testing)
