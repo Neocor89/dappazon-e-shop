@@ -39,7 +39,7 @@ async function main() {
 /*
  TODO
 + run -> npx hardhat node
-+ Connect wallet in hardhat network
++ Start front end creation
 */
 
 // Recommended pattern to be able to use async/await everywhere
