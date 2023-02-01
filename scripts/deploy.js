@@ -35,8 +35,15 @@ async function main() {
   }
 }
 
+//! check Restart process 🚀
+/*
+ TODO
++ run -> npx hardhat node
++ Connect wallet in hardhat network
+*/
+
 // Recommended pattern to be able to use async/await everywhere
-// and properly handle errors.
+// and manage properly handle errors.
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
