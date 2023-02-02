@@ -35,11 +35,12 @@ async function main() {
   }
 }
 
-//! check Restart process 🚀
+//! check RESTART PROCESS 🚀
 /*
  TODO
-+ run -> npx hardhat node
-+ Start front end creation
++ 1. Run -> npx hardhat node
++ 2. Connect Metamask wallet
++ 3. Start front end creation
 */
 
 // Recommended pattern to be able to use async/await everywhere
