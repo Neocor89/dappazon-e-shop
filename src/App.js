@@ -15,13 +15,25 @@ import config from "./config.json";
 function App() {
   //: useState return an Array
   const [account, setAccount] = useState(null);
+  const [provider, setProvider] = useState(null);
 
   const loadBlockChainData = async () => {
-    // const accounts = await window.ethereum.request({
-    //   method: "eth_requestAccounts",
-    // });
-    // const account = ethers.utils.getAddress(accounts[0]);
-    // setAccount(account);
+    //: Etherjs provider -> Transform App in Blockchain DApp
+    //: Connect to the blockchain React App
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    setProvider(provider);
+
+    const network = await provider.getNetwork();
+    console.log(network);
+
+    // Connect to SMart Contracts
+    const dappazon = new ethers.Contract(
+      "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      Dappazon,
+      provider
+    );
+    // Load Products
+    // Fetch Products
   };
 
   useEffect(() => {
@@ -31,7 +43,7 @@ function App() {
   return (
     <div>
       <Navigation account={account} setAccount={setAccount} />
-      <h2>Welcome to Dappazon</h2>
+      <h2>Dapp azon</h2>
     </div>
   );
 }
