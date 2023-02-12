@@ -1,20 +1,21 @@
 import { ethers } from "ethers";
 const Navigation = ({ account, setAccount }) => {
   const connectHandler = async () => {
+    //: Connect Account
     const accounts = await window.ethereum.request({
       method: "eth_requestAccounts",
     });
     const account = ethers.utils.getAddress(accounts[0]);
     setAccount(account);
+    console.log(account);
   };
   return (
     <nav>
       <div className="nav__brand">
         <h1>Dappazon</h1>
       </div>
-
       <input type="text" className="nav__search" />
-
+      //: Logic for Account Connection
       {account ? (
         <button type="button" className="nav__connect">
           {account.slice(0, 6) + "..." + account.slice(38, 42)}
@@ -24,7 +25,6 @@ const Navigation = ({ account, setAccount }) => {
           Connect
         </button>
       )}
-
       <ul className="nav__links">
         <li>
           <a href="#Clothing & Jewelry">Clothing & Jewelry</a>
